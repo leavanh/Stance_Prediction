@@ -18,9 +18,9 @@ In general your repository should (in the end) look somehow like this:
     │   ├── validation_data             # or even simulated data sets (simply provide them so that
     │   ├── test_data                   # your code can be executed)
     ├── code
-    │   ├── main.R                      # a file which puts together all the pieces
-    │   ├── 01_preprocessing            
-    │   ├── 02_descriptives              
+    │   ├── main.R/.py                  # a file which puts together all the pieces
+    │   ├── 01_preprocessing.R/.py            
+    │   ├── 02_descriptives.R/.py              
     │   ├── ...            
     │   └── requirements.txt            # for reproducibility
     └── ...
