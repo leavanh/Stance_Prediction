@@ -24,6 +24,7 @@ In general your repository should (in the end) look somehow like this:
     │   ├── 02_descriptives.R/.py              
     │   ├── ...            
     │   └── requirements.txt            # for reproducibility
+    ├── results                         # raw data results of experiments
     └── ...
 ``` 
 
