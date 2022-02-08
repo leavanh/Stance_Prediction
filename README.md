@@ -13,6 +13,7 @@ In general your repository should (in the end) look somehow like this:
     ├── thesis
     │   ├── thesis.tex                  # or .Rmd, .Rnw or similar 
     │   ├── thesis.pdf                  # pdf-file of your thesis
+    │   ├── bibliography.bib            # bibtex entries for the references
     ├── data
     │   ├── train_data                  # these data sets can be excerpts from the original data
     │   ├── validation_data             # or even simulated data sets (simply provide them so that
@@ -30,5 +31,5 @@ In general your repository should (in the end) look somehow like this:
 
 Further you should provide
 
-- a short explanation of your thesis project in the readme
+- a short explanation of your thesis project in the README
 - explanation of the folder structure and the different scripts
