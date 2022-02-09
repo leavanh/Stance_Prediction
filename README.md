@@ -4,6 +4,8 @@ This repository is intended to serve as a really basic template for theses, cont
  
 Use it via `New Project > Create from template > Group > thesis-template`.  
 
+A template for the tex-file can be found here: https://www.overleaf.com/latex/templates/lmu-slds-thesis-template/mhnhsykmqpvm
+
 ## General structure
 
 In general your repository should (in the end) look somehow like this:
