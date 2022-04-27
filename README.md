@@ -3,6 +3,7 @@
 This repository is intended to serve as a really basic template for theses, containing merely empty folders for pre-defining the structure for a repository. You are not obligated to work within GitLab or use git at all (despite we highly recommend it), but for the final submission you need to provide a repository with a similar structure (see below) and running code.  
  
 Use it via `New Project > Create from template > Group > thesis-template`.  
+(_Important:_ Make sure to adjust the path in the project url to the current semester)
 
 A template for the tex-file can be found here: https://www.overleaf.com/latex/templates/lmu-slds-thesis-template/mhnhsykmqpvm
 
