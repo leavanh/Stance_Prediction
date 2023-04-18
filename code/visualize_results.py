@@ -8,13 +8,13 @@ import matplotlib.pyplot as plt
 
 # load the txt files containing the results
 
-with open(path+"Models/stance_prediction/results_electra.txt") as file:
+with open(path+"Results/results_electra.txt") as file:
     results_electra = [line.rstrip() for line in file]
 
 results_electra_no_semsearch = results_electra[0]
 results_electra.remove(results_electra_no_semsearch)
 
-with open(path+"Models/stance_prediction/results_bert.txt") as file:
+with open(path+"Results/results_bert.txt") as file:
     results_bert = [line.rstrip() for line in file]
 
 results_bert_no_semsearch = results_bert[0]
@@ -131,7 +131,7 @@ create_plot(matrix_bert_f1, "f1", "bert", results_bert_no_semsearch)
 
 # visualize the results of the models with summary as context
 
-with open(path+"Models/stance_prediction/results_electra_summary.txt") as file:
+with open(path+"Results/results_electra_summary.txt") as file:
     results_electra_summary = [line.rstrip() for line in file]
 
 df_electra_summary = create_df(results_electra_summary)
