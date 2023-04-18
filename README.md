@@ -1,3 +1,81 @@
+In this repository you will find the following files
+```bash
+    .
+    ├── code
+    │   ├── Data                                # contains all the data sets which are needed to fit BERT and ELECTRA 
+    │   │   ├── total.xlsx                      # dataset that contains party, query and agreement (from Maximilian Witte)
+    │   │   ├── total_extended_complete.xlsx    # contains also the context (done by get_data.py)
+    │   │   ├── total_extended_input.xlsx       # contains also the different input patterns (done by get_data.py)
+    │   │   ├── train_extended_input.xlsx       # training part of total_extended_input (done by get_data.py)
+    │   │   └── test_extended_input.xlsx        # testing part of total_extendend_input (done by get_data.py)
+    │   ├── Embeddings                          # contains the embeddings for all sentences in the party manifestos
+    │   │   ├── all_bertflow
+    │   │   ├── all_isbert
+    │   │   └── ...                             # for each semantic search method a separate file
+    │   ├── isbert_utils                        # folder that contains all the utils needed for ISBERT.py
+    │   ├── (Models)                            # not uploaded, can be found at TODO
+    │   │                                       # contains all semantic search, BERT and ELECTRA models
+    │   ├── Plots                               # folder that contains the plots produced by visualize_results.py
+    │   ├── Results                             # folder that contains the txt files with the model results
+    │   ├── Wahlprogramme                       # contains the party manifestos
+    │   │   ├── afd 2021.xlsx
+    │   │   ├── cdu 2021.xlsx
+    │   │   ├── ...                             # for all the parties
+    │   │   └──  all_sentences.xlsx             # random shuffle of all sentences in all party manifestos (done by get_data.py)
+    │   ├── Bert_Flow_utils.py                  # utils needed for Bert_Flow.py
+    │   ├── Bert_Flow.py                        # semantic search technique BERT-Flow applied to BERT embeddings
+    │   ├── bert.py                             # function used in fit_models.py to fit all BERT models
+    │   ├── electra.py                          # function used in fit_models.py to fit all ELECTRA models
+    │   ├── fit_models.py                       # fits all models and saves the accuracy and f1 score of the models on the test data
+    │   ├── get_data.py                         # makes all the datasets used for training (apart from the summarization experiment)
+    │   ├── ISBERT.py                           # semantic search technique ISBERT applied to BERT embeddings
+    │   ├── new_embedding.py                    # function: sentence -> embedding
+    │   ├── SBERT_Bert_Flow.py                  # semantic search technique BERT-Flow applied to SBERT embeddings
+    │   ├── SBERT_whitening.py                  # semantic search technique Whitening applied to SBERT embeddings
+    │   ├── SBERT.py                            # semantic search technique SBERT
+    │   ├── SBERTWK_utils.py                    # utils needed for SBERTWK.py
+    │   ├── SBERTWK.py                          # semantic search technique SBERTWK applied to BERT embeddings
+    │   ├── similarity_search.py                # function: sentence -> 5 most semantically similar sentences
+    │   ├── summarize.py                        # makes the data used for the summarization experiment
+    │   ├── visualize_results.py                # plots the tables of the results for all models
+    │   ├── whitening.py                        # semantic search technique Whitening applied to BERT embeddings
+    │   └── requirements.yaml                   # contains the conda environment
+    ├── thesis
+    │   ├── thesis.tex                          # or .Rmd, .Rnw or similar 
+    │   ├── thesis.pdf                          # pdf-file of your thesis
+    │   ├── bibliography.bib                    # bibtex entries for the references
+    └── ...
+``` 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Template for Bachelor and Master Theses (Dept. of Statistics, LMU)
 
 This repository is intended to serve as a really basic template for theses, containing merely empty folders for pre-defining the structure for a repository. You are not obligated to work within GitLab or use git at all (despite we highly recommend it), but for the final submission you need to provide a repository with a similar structure (see below) and running code.  
