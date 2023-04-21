@@ -1,0 +1,6 @@
+input11_summary_isbert: accuracy = 0.78, f1 = 0.781
+input12_summary_isbert: accuracy = 0.784, f1 = 0.783
+input21_summary_isbert: accuracy = 0.789, f1 = 0.791
+input22_summary_isbert: accuracy = 0.766, f1 = 0.766
+input3_summary_isbert: accuracy = 0.768, f1 = 0.774
+input4_summary_isbert: accuracy = 0.772, f1 = 0.773
