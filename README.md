@@ -13,8 +13,6 @@ In this repository you will find the following files
     │   │   ├── all_isbert
     │   │   └── ...                             # for each semantic search method a separate file
     │   ├── isbert_utils                        # folder that contains all the utils needed for ISBERT.py
-    │   ├── (Models)                            # not uploaded, can be found at TODO
-    │   │                                       # contains all semantic search, BERT and ELECTRA models
     │   ├── Plots                               # folder that contains the plots produced by visualize_results.py
     │   ├── Results                             # folder that contains the txt files with the model results
     │   ├── Wahlprogramme                       # contains the party manifestos
@@ -40,11 +38,10 @@ In this repository you will find the following files
     │   ├── visualize_results.py                # plots the tables of the results for all models
     │   ├── whitening.py                        # semantic search technique Whitening applied to BERT embeddings
     │   └── requirements.yaml                   # contains the conda environment
-    ├── thesis
-    │   ├── thesis.tex                          # or .Rmd, .Rnw or similar 
-    │   ├── thesis.pdf                          # pdf-file of your thesis
-    │   ├── bibliography.bib                    # bibtex entries for the references
-    └── ...
+    └── thesis
+        ├── thesis.tex                          # or .Rmd, .Rnw or similar 
+        ├── thesis.pdf                          # pdf-file of your thesis
+        └── bibliography.bib                    # bibtex entries for the references
 ``` 
 
 
