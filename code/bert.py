@@ -13,7 +13,8 @@ import wandb
 
 
 def fit_bert(input_name, batches = 16, epochs = 11, lr = 2.95e-5): # defaults (except batch size) are from original project (Maximilian Witte)
-  path = "/home/ubuntu/lrz/thesis/Stance_prediction/"
+  path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+  # path = "/home/ubuntu/lrz/thesis/Stance_prediction/"
 
   device = "cuda:0" if torch.cuda.is_available() else "cpu"
 

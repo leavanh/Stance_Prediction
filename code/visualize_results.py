@@ -1,6 +1,7 @@
 # Visualize tables of the accuracy and f1 score results for all models
 
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 import pandas as pd
 import seaborn as sns

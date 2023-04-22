@@ -1,2 +1,4 @@
 __pycache__/
 code/cache/
+code/Models/
+wandb
