@@ -1,13 +1,12 @@
 # Fit SBERT-WK model
 # Code is from https://github.com/BinWang28/SBERT-WK-Sentence-Embedding with a few changes to use different base model and data
 
-
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 from __future__ import absolute_import, division, unicode_literals
 
 import sys
-import io
 import numpy as np
 import pandas as pd
 import logging as lg
@@ -16,7 +15,6 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 import random
 import pickle
-from sentence_transformers import util
 
 from transformers import AutoConfig, AutoTokenizer, AutoModelWithLMHead
 sys.path.append(path)

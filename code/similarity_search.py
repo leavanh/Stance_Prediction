@@ -1,6 +1,7 @@
 # Function that takes a sentence and returns the most semantically similar sentences
 
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 import sys
 sys.path.append(path)
@@ -11,7 +12,6 @@ import nltk
 import numpy as np
 import pandas as pd
 import os
-
 from rank_bm25 import BM25Plus
 
 from new_embedding import embedding

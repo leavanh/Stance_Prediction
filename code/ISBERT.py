@@ -2,8 +2,8 @@
 # utils are in a seperate folder: isbert_utils
 # Code is from https://github.com/yanzhangnlp/IS-BERT with a few changes to use different base model and data
 
-
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 import sys
 sys.path.append(path)
@@ -19,7 +19,7 @@ from transformers import AutoTokenizer
 
 model_name = 'bert-base-german-cased'
 train_batch_size = 32
-num_epochs = 4 # chosen by me
+num_epochs = 4
 model_save_path = path+'Models/isbert-model'
 sentences = list(pd.read_excel(path+r'Wahlprogramme/all_sentences.xlsx')[0])
 

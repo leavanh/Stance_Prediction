@@ -1,7 +1,7 @@
 # Use existing SBERT model to get embeddings
 
-
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 import pandas as pd
 import pickle

@@ -1,12 +1,12 @@
 # Function that takes a sentence and returns an embedding depending on the semantic search method used
 
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 import torch
 import pickle
 import os
 import sys
-import pandas as pd
 import numpy as np
 import nltk
 from sentence_transformers import SentenceTransformer

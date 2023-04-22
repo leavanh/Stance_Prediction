@@ -1,7 +1,7 @@
 # Use whitening transformation on SBERT embeddings
 
-
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 from sentence_transformers import SentenceTransformer
 import pandas as pd

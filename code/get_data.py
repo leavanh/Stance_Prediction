@@ -2,11 +2,15 @@
 # Apply the semantic search models, make the different input patterns
 # Split into train and test
 
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
+import sys
+sys.path.append(path)
 import pandas as pd
 import os
 import nltk
+nltk.download('punkt')
 import regex as re
 
 from similarity_search import find_sentences
@@ -19,8 +23,8 @@ path_manifestos = path + "Wahlprogramme/"
 
 manifestos = {}
 for party in ["gruene", "fdp", "linke", "spd", "cdu", "afd"]:
-    path = "{0}{1} 2021.xlsx".format(path_manifestos, party)
-    manifesto = pd.read_excel(path)['text']
+    party_path = "{0}{1} 2021.xlsx".format(path_manifestos, party)
+    manifesto = pd.read_excel(party_path)['text']
     manifesto = manifesto.str.cat(sep = " ") # add all paragraphs together
     sentences = nltk.sent_tokenize(manifesto) # split into sentences
     manifestos[party] =  sentences # save in dictionary
@@ -111,6 +115,7 @@ for model in ["sbert", "isbert", "sbertwk", "bertflow", "sbert-bertflow", "white
 
 # isbert, bertflow and sbert-bertflow are too long -> use only the first 4 best sentences for bertflow and 3 for isbert and sbert-bertflow
 
+#------------------------------------
 # split into train, test and validation data
 
 # equal sample all three sources (code from https://drive.google.com/drive/folders/1JBJC9-WzkbhcacEg2RCbij1jeA34mf-x?usp=share_link)

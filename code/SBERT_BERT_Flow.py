@@ -1,8 +1,8 @@
 # Fit BERT-Flow model using SBERT embeddings
 # Code is from https://github.com/UKPLab/pytorch-bertflow with a few changes to use different base model and data
 
-
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 import sys
 from transformers import AutoTokenizer
@@ -15,7 +15,7 @@ sys.path.append(path)
 from Bert_Flow_utils import TransformerGlow, AdamWeightDecayOptimizer
 
 batch_size = 64 # as in paper
-num_epochs = 2 # chosen by me
+num_epochs = 2
 max_length = 512 
 model_name_or_path = 'sentence-transformers/paraphrase-multilingual-mpnet-base-v2'
 bertflow = TransformerGlow(model_name_or_path, pooling='first-last-avg')  # pooling could be 'mean', 'max', 'cls' or 'first-last-avg' (mean pooling over the first and the last layers)
