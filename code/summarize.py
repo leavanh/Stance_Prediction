@@ -1,7 +1,8 @@
 # Use IGEL model (https://huggingface.co/philschmid/instruct-igel-001) to summarize the 5 ISBERT input sentences into 1
 # apply the patterns and save so models can be trained on the new input
 
-path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
+path = '/home/ubuntu/lrz/thesis/ma_schulzvanheyden/code/'
+# path = '/home/ubuntu/lrz/thesis/Stance_prediction/'
 
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
