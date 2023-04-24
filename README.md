@@ -1,5 +1,9 @@
-TODO: description of project
+# Enhancing Stance Prediction by Utilizing Party Manifestos
 
+This project aims to explore the effectiveness of integrating information from political party manifestos to enhance the accuracy of large language models in predicting party stances. This is done by comparing the performance of two NLP models, ELECTRA and BERT, in order to assess their suitability for this specific task, as well as by using a variety of semantic search techniques and input patterns.
+
+
+## Contents of the Repository
 
 In this repository you will find the following files:
 ```bash
@@ -48,8 +52,8 @@ In this repository you will find the following files:
         └── bibliography.bib                    # bibtex entries for the references
 ``` 
 
-There are two virtual environments needed as some packages have different dependencies. The following files use the packages from the semantic search environment: ``isbert_utils, BERT_Flow_utils.py, BERT_Flow.py, get_data.py, ISBERT.py, new_embedding.py, SBERT_BERT_Flow.py, SBERT_whitening.py, SBERT.py, SBERTWK_utils.py, similarity_search.py, summarize.py, whitening.py``. The scripts that are used to fit the ELECTRA and BERT models ``bert.py, electra.py, fit_models.py`` and to visualize the results ``visualize_results.py`` use the other virtual environment.
+## How to use this repository
 
-Explain what to do for the semantic search
-Explain what to do to fit models.
+There are two virtual environments needed as some packages have different dependencies. The following files use the packages from the semantic search environment: ``isbert_utils, BERT_Flow_utils.py, BERT_Flow.py, get_data.py, ISBERT.py, new_embedding.py, SBERT_BERT_Flow.py, SBERT_whitening.py, SBERT.py, SBERTWK_utils.py, SBERTWK.py, similarity_search.py, summarize.py, whitening.py``. The scripts that are used to fit the ELECTRA and BERT models ``bert.py, electra.py, fit_models.py`` and to visualize the results ``visualize_results.py`` use the other virtual environment.
 
+In order to apply the semantic search methods to the party manifestos first the models have to be trained. To do this run the scripts ``BERT_Flow.py, ISBERT.py, SBERT_BERT_Flow.py, SBERT_whitening.py, SBERT.py, SBERTWK.py, whitening.py``. This trains the models and computes the embeddings for all the sentences in the party manifestos. In ``get_data.py`` these embeddings are then used to find the 5 most semantically similar sentences for each query. ``get_data.py`` also prepares the different inputs. Only the summary with IGEL is done in a different script, ``summarize.py``. ``fit_models.py`` fits the BERT and ELECTRA models using the different inputs (please remember to change to a different venv). In order to plot the results run ``visualize_results.py``.
