@@ -87,7 +87,7 @@ def create_plot(matrix, metric, model, results_no_semsearch):
 
     # set up the plot
     fig, ax = plt.subplots(figsize=(18, 6))
-    sns.heatmap(matrix, annot=True, cmap=str(color), fmt='.3f', linewidths=.5, cbar=False, ax=ax, annot_kws={"size": 12})
+    sns.heatmap(matrix, annot=True, cmap=str(color), fmt='.3f', linewidths=.5, cbar=False, ax=ax, annot_kws={"size": 16})
 
     # Drawing the frame
     ax.axhline(y = 0, color='k',linewidth = 10, xmin=0, xmax=1-(1/8.7))
@@ -96,8 +96,8 @@ def create_plot(matrix, metric, model, results_no_semsearch):
     ax.axvline(x = 8, color = 'k', linewidth = 5, ymin=1/6.5, ymax=1)
 
     # set the tick labels to be horizontal and remove axis ticks
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=0, horizontalalignment='center', fontsize=12)
-    ax.set_yticklabels(ax.get_yticklabels(), rotation=0, horizontalalignment='right', fontsize=12)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=0, horizontalalignment='center', fontsize=14)
+    ax.set_yticklabels(ax.get_yticklabels(), rotation=0, horizontalalignment='right', fontsize=14)
     ax.xaxis.tick_top() # x axis on top
     ax.xaxis.set_label_position('top')
     ax.tick_params(axis='both', which='both', length=0)
@@ -105,12 +105,12 @@ def create_plot(matrix, metric, model, results_no_semsearch):
     # set the axis labels and title
     ax.set_xlabel('Model', fontsize=14)
     ax.set_ylabel('Input', fontsize=14)
-    ax.set_title(f'{model.upper()}: {metric.capitalize()} by input and model', fontsize=16)
+    ax.set_title(f'{model.upper()}: {metric.capitalize()} by input and model', fontsize=18)
 
     # add the no sem search values to bottom left corner
-    ax.text(0, -0.05, f"{metric.capitalize()} without semantic search: {metric_no_semsearch}", fontsize=12, transform=ax.transAxes)
+    ax.text(0, -0.05, f"{metric.capitalize()} without semantic search: {metric_no_semsearch}", fontsize=14, transform=ax.transAxes)
 
-    plt.savefig(path+f'Plots/{model}_{metric}.png', transparent=True)
+    plt.savefig(path+f'Plots/{model}_{metric}.png', transparent=True, bbox_inches="tight")
 
 
 # make the plots
@@ -147,7 +147,7 @@ acc_electra_no_semsearch = float(electra_no_semsearch[0].split(' = ')[1])
 
 # set up the plot
 fig, ax = plt.subplots(figsize=(18, 6))
-sns.heatmap(matrix_electra_summary_acc, annot=True, cmap=str(color), fmt='.3f', linewidths=.5, cbar=False, ax=ax, annot_kws={"size": 12})
+sns.heatmap(matrix_electra_summary_acc, annot=True, cmap=str(color), fmt='.3f', linewidths=.5, cbar=False, ax=ax, annot_kws={"size": 16})
 
 # Drawing the frame
 ax.axhline(y = 0, color='k',linewidth = 10, xmin=0, xmax=1-(1/2.97))
@@ -156,8 +156,8 @@ ax.axvline(x = 0, color = 'k', linewidth = 10, ymin=1/6.5, ymax=1)
 ax.axvline(x = 2, color = 'k', linewidth = 5, ymin=1/6.5, ymax=1)
 
 # set the tick labels to be horizontal and remove axis ticks
-ax.set_xticklabels(ax.get_xticklabels(), rotation=0, horizontalalignment='center', fontsize=12)
-ax.set_yticklabels(ax.get_yticklabels(), rotation=0, horizontalalignment='right', fontsize=12)
+ax.set_xticklabels(ax.get_xticklabels(), rotation=0, horizontalalignment='center', fontsize=14)
+ax.set_yticklabels(ax.get_yticklabels(), rotation=0, horizontalalignment='right', fontsize=14)
 ax.xaxis.tick_top() # x axis on top
 ax.xaxis.set_label_position('top')
 ax.tick_params(axis='both', which='both', length=0)
@@ -165,12 +165,12 @@ ax.tick_params(axis='both', which='both', length=0)
 # set the axis labels and title
 ax.set_xlabel('Model', fontsize=14)
 ax.set_ylabel('Input', fontsize=14)
-ax.set_title('ELECTRA: Accuracy by input and model', fontsize=16)
+ax.set_title('ELECTRA: Accuracy by input and model', fontsize=18)
 
 # add the no sem search values to bottom left corner
-ax.text(0, -0.05, f"Accuracy without semantic search: {acc_electra_no_semsearch}", fontsize=12, transform=ax.transAxes)
+ax.text(0, -0.05, f"Accuracy without semantic search: {acc_electra_no_semsearch}", fontsize=14, transform=ax.transAxes)
 
-plt.savefig(path+f'Plots/electra_summary_accuracy.png', transparent=True)
+plt.savefig(path+f'Plots/electra_summary_accuracy.png', transparent=True, bbox_inches="tight")
 
 # F1, do own plot
 matrix_electra_summary_f1 = create_matrix(df_electra_summary, "f1")
@@ -180,7 +180,7 @@ f1_electra_no_semsearch = float(electra_no_semsearch[1].split(' = ')[1])
 
 # set up the plot
 fig, ax = plt.subplots(figsize=(18, 6))
-sns.heatmap(matrix_electra_summary_f1, annot=True, cmap=str(color), fmt='.3f', linewidths=.5, cbar=False, ax=ax, annot_kws={"size": 12})
+sns.heatmap(matrix_electra_summary_f1, annot=True, cmap=str(color), fmt='.3f', linewidths=.5, cbar=False, ax=ax, annot_kws={"size": 16})
 
 # Drawing the frame
 ax.axhline(y = 0, color='k',linewidth = 10, xmin=0, xmax=1-(1/2.97))
@@ -189,8 +189,8 @@ ax.axvline(x = 0, color = 'k', linewidth = 10, ymin=1/6.5, ymax=1)
 ax.axvline(x = 2, color = 'k', linewidth = 5, ymin=1/6.5, ymax=1)
 
 # set the tick labels to be horizontal and remove axis ticks
-ax.set_xticklabels(ax.get_xticklabels(), rotation=0, horizontalalignment='center', fontsize=12)
-ax.set_yticklabels(ax.get_yticklabels(), rotation=0, horizontalalignment='right', fontsize=12)
+ax.set_xticklabels(ax.get_xticklabels(), rotation=0, horizontalalignment='center', fontsize=14)
+ax.set_yticklabels(ax.get_yticklabels(), rotation=0, horizontalalignment='right', fontsize=14)
 ax.xaxis.tick_top() # x axis on top
 ax.xaxis.set_label_position('top')
 ax.tick_params(axis='both', which='both', length=0)
@@ -198,9 +198,9 @@ ax.tick_params(axis='both', which='both', length=0)
 # set the axis labels and title
 ax.set_xlabel('Model', fontsize=14)
 ax.set_ylabel('Input', fontsize=14)
-ax.set_title('ELECTRA: F1 by input and model', fontsize=16)
+ax.set_title('ELECTRA: F1 by input and model', fontsize=18)
 
 # add the no sem search values to bottom left corner
-ax.text(0, -0.05, f"F1 without semantic search: {f1_electra_no_semsearch}", fontsize=12, transform=ax.transAxes)
+ax.text(0, -0.05, f"F1 without semantic search: {f1_electra_no_semsearch}", fontsize=14, transform=ax.transAxes)
 
-plt.savefig(path+f'Plots/electra_summary_f1.png', transparent=True)
+plt.savefig(path+f'Plots/electra_summary_f1.png', transparent=True, bbox_inches="tight")
