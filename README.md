@@ -46,10 +46,10 @@ In this repository you will find the following files:
     │   ├── whitening.py                        # semantic search technique Whitening applied to BERT embeddings
     │   ├── requirements_fit_models.yaml        # contains the requirements for the virtual environment for fitting the models
     │   └── requirements_sem_search.yaml        # contains the requirements for the semantic search virtual environment
-    └── thesis
-        ├── thesis.tex                          # or .Rmd, .Rnw or similar 
-        ├── thesis.pdf                          # pdf-file of your thesis
-        └── bibliography.bib                    # bibtex entries for the references
+    └── thesis                                  # contains the LaTeX project for the thesis and a pdf
+        ├── main.tex                           
+        ├── ...
+        └── Masterarbeit.pdf                    # pdf-file of the thesis
 ``` 
 
 ## How to use this repository
