@@ -1,0 +1,83 @@
+\chapter{Data and Problem Statement}\label{statements}
+
+Before delving into the details of the study, it is relevant to provide some context on the political landscape and the tools used to help voters understand party stances in Germany. The following sections provide a brief overview of the different parties and ideologies present in the German political landscape, as well as an introduction to the Wahl-O-Mat platform. This is followed by a discussion of the problem statement and the data used for the study.
+
+\section{Political Landscape in Germany}\label{political_landscape}
+
+Germany is a federal state, and apart from the federal government, each of the 16 individual states hold political power. The states are responsible for certain areas, such as education, culture, and police law. There is a wide variety of parties in Germany, some of them appearing nationwide and others only in certain states. For example, there is the CSU (Christlich-Soziale Union in Bayern), which only competes in Bavaria. Together with the CDU (Christlich Demokratische Union Deutschlands), which competes everywhere but Bavaria, they form the so-called \textit{Union}. Both parties refrain from competing in their respective other federal states and work together in the German Bundestag.
+
+The Bundestag is Germany's parliament and the country's main legislative body. Its members are elected every 4 years, with the most recent election in 2021. Right now, there are 7 parties in the Bundestag: the \textit{SPD} (Sozialdemokratische Partei Deutschlands) has the majority of seats with 206 out of 734. The \textit{Union} (consisting of \textit{CDU} and \textit{CSU}) takes up 197 seats, the party \textit{Bündnis 90/Die Grünen} 118, the \textit{FDP} (Freie Demokratische Partei) 92, the \textit{AfD} (Alternative für Deutschland) 81, the \textit{die Linke} 39, and a small regional minority party named \textit{Südschleswigscher Wählerverband} (SSW) takes up the last seat \citep{wiki_bundestag}.
+
+In this thesis (and in the work it builds upon), the SSW is ignored since it is a small and very regional party with no real decision-making power in the Bundestag. The CDU and CSU are treated as belonging to one group, the Union.
+
+As the goal is to predict party stances, it is useful to have at least a basic understanding of the parties goals and politics.
+
+The \textit{SPD} emerged from labor parties and, as their successor, sees itself as a promoter of greater social justice. They call for the strengthening of the social market economy (in German: ``Soziale Marktwirtschaft'') and want an ecological and employee-friendly restructuring of society \citep{schubert2016politiklexikon}. It could be described as center-left in the political landscape.
+
+The CDU supports a free-market economy and is rather conservative on social issues but still supports social welfare programs. ``The CSU is more conservative than the CDU, especially on social issues such as abortion, church-state matters, immigration, and the rights of Germany’s many foreign residents.'' \citep{conradt_2013}. The \textit{Union} is placed in the center-right on the political spectrum \citep{conradt_2021}.
+
+\textit{Die Grünen} (English: ``the Greens'') are, as the name suggests, an environmental party. They are concerned with ecological, economic, and social sustainability and work on issues such as the promotion of renewable energies, nuclear phase-out, agricultural turnaround, and restructuring of the tax system \citep{decker_2021}.
+
+The \textit{FDP} is an economically liberal party. It advocates less control by the state and more personal responsibility on the citizen's part. This includes, for example, the abolition of the minimum wage, the reduction of the broadcasting contribution, and simpler tax laws \citep{wiki_fdp}.
+
+The \textit{AfD} is a far-right party founded in 2013. According to \citet{bbc_2020}, while founded as an anti-euro party, the AfD now focuses on fighting immigration and Islam with some of its members trivializing the Holocaust and being observed by the ``Verfassungsschutz'' (German domestic intelligence services).
+
+\textit{Die Linke} (English: ``the Left'') is furthest left of all the parties currently in the Bundestag. Its main focus lies on democratic socialism as an alternative to capitalism. As such, they want to increase rates for middle- and high-income taxes and spend more public money on education, research, culture and infrastructure. \citep{wiki_linke}.
+
+\section{Wahl-O-Mat}\label{wahlomat}
+
+The German ``Wahl-O-Mat'' \citep{wahlomat} is a question-and-answer tool that is supposed to aid users in figuring out which political party registered for an election is closest to their own political position. A separate Wahl-O-Mat is developed for each election and posted on the internet a few weeks before the polls open.
+
+\citet{wahl-o-mat-marschall} describes how it works: ``The Wahl-O-Mat presents 38 propositions to its users, for example, ‘All public buildings should by law become non-smoking areas’ or ‘The VAT must be raised’. People visiting the website are asked to take a stand on the propositions by clicking one of three buttons: ‘agree’, ‘disagree’ or ‘neutral’. Additionally, users have the option of skipping several theses. After voting on all items on the list, the users can mark those propositions, that they consider important to them, to give them a special weight in the final calculation. Finally, the Wahl-O-Mat calculates the distances between the voter’s and the parties’ positions and displays, as the result, the party with the smallest distance - the best match. Additionally, the Wahl-O-Mat calculates the extent of agreement between the voter’s position and all parties by displaying the respective summed distances for all parties selected. Furthermore, for each proposition the users have the option to take a closer look at the relation between the parties’ positions and their own point of view. Finally, Wahl-O-Mat players can have a look at any explanation the parties may have provided concerning the positions they have taken on these propositions.''
+
+In addition to providing information about the essential beliefs of the parties, the Wahl-O-Mat serves as an instrument for promoting political communication. Follow-up communication as an exchange (especially in social groups such as school, family,or workplace) can contribute to the formation of political opinion before elections \citep{wahl-o-mat-rohmann}. Far beyond the specific election ballot, the aim is to promote engagement with politics.
+
+And it achieves its goal. The first Wahl-O-Mat was published in 2002 and became popular right away; the initial iteration was used about 3.6 million times, and the highest usage was achieved prior to the 2021 German Federal Election when it was used about 21.3 million times \citep{wahl-o-mat-marschall}.
+
+\section{Problem} \label{problem}
+
+While the Wahl-O-Mat \citep{wahlomat} is a very useful tool for making politics tangible, get people interested in it, and also help them check which parties represent their interests, it has one major drawback. The statements are pre-defined. It is not possible for users to introduce topics they are interested in. This is exactly the problem that language models could help solve. NLP is now a crucial tool for deciphering and analyzing user-generated content across a variety of fields, and it could also be used for political stance prediction. Thus, the goal of this study is to investigate the use of language models and NLP methods to overcome this limitation of the Wahl-O-Mat and examine the accuracy of political stance prediction by incorporating context from the party manifestos.
+
+The goal of this thesis is to develop a classifier that predicts party stances, similar to the Wahl-O-Mat. Specifically, the classifier should predict how the six parties currently represented in the Bundestag would agree with a user-generated Wahl-O-Mat-style statement (query). While \citet{witte_2022} have already trained a similar model, this thesis aims to investigate whether incorporating party manifestos can further improve the model performance.
+
+Since the manifestos contain information about the parties stances, being able to incorporate them into the model should (in theory) boost the performance. The first step is to extract the relevant passages from the manifestos. Since they are too long to be fed to the model as a whole, it is necessary to find the parts that relate to the user query. In this thesis, a couple of so-called semantic search techniques are described and applied to the data in order to find the sentences that contain the most semantic similarity (i.e. similar meaning) with the query. There is currently a lot of research on improving existing methods and focusing on new approaches in semantic search. It is hard to differentiate between what works and brings an improvement and what does not, especially since most of the models are tested on English data, but the language of the data used in this thesis is German. A range of ideas are tested in an effort to find the best strategy. Four newer approaches are compared with two established ones.
+
+The second issue to address and explore is the ``input pattern design''. Input pattern design refers to different combinations of the parts of the input (party, query, and relevant sentences from the manifesto) that are fed into the model. It is not clear what the optimal way to do this is. In order to find out, four different patterns (and two variations) are compared with each other and also to a baseline of no context (i.e. no party manifestos, just the party and the query). Some of these patterns are inspired by human-speech-like language, while others are more structured in nature. The thesis wants to explore if adding context (the party manifestos) improves the models predictions and if so which input pattern design works best.
+
+The last choice to be made is the model. There are a lot of NLP models that could be used for this task, and it is not straightforward which one to choose. The combinations of semantic search technique and input pattern design are applied to two models in order to be able to choose the best one. It is also of interest if some combinations perform better depending on the model.
+
+This research could be useful in a number of ways. If political stances in user-generated content can be accurately classified, this would allow people to determine which political parties correspond to their own beliefs and values. Citizens can get a thorough understanding of the political environment and are able to make an informed voting decision. Thus giving people a useful tool to participate in democracy.
+
+Second, the research surrounding language models can be advanced. The use of these methods in a new and crucial area, political prediction, can be investigated. By using party manifestos as a source of context, it is possible to show how useful domain-specific knowledge is for enhancing the performance of NLP models.
+
+\section{Data} \label{data}
+
+\subsection{User-generated Statements}
+
+The data was collected from five different sources by \citet{witte_2022} shown in Figure \ref{fig:data}:
+
+\begin{enumerate}
+    \item \textit{Voting Advice Application}: The Wahl-O-Mat \citep{wahlomat} provides 1809 political statements for the period between 2002 and 2021. For all statements, there is an approval label for each of the six parties: ``SPD'', ``Union'', ``Die Grüne'', ``FDP'', ``AfD'' and ``Die Linke''.
+    \item \textit{Party Short Manifestos}: To extend this data, 801 manually extracted statements from the 2021 party short manifestos were added. Unlike the Wahl-O-Mat data, these statements only have one label (that of the corresponding party).
+    \item \textit{User Generated Texts}: 3737 statements were user-generated. Participants were asked for political statements and which parties would support those statements the most and the least (in their personal opinion). This corresponds to two labels (one positive and one negative).
+
+At that point, every statement in the data set is politically controversial, meaning that each statement has parties that agree and those that disagree. Users may also be drawn to issues that are truly uncontroversial among the parties, such as ``Democracy should be protected''. Recent studies have demonstrated the effectiveness of targeted data set enrichment as a method for enhancing model resilience and resolving associated problems \citep{gupta2021synthesizing, bakhtin2022human}. In order to do this, a total of 281 uncontroversial statements were added with equal labels for all parties:
+
+    \item \textit{UN Charta \& Constitution}: 91 statements from the German constitution stating basic human rights and 48 statements from the United Nations Human Rights Charter.
+    \item \textit{Adversarial Examples}: 142 manually created adversarial examples.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width = 1\linewidth]{figures/Data.png}
+\caption{The different data sources.}
+\label{fig:data}
+\end{figure}
+
+Another possible issue is that one word can change a sentence's meaning and, consequently, its labeling (for example, ``Taxes should be raised'' vs. ``Taxes should not be raised''). Such negated phrases are generated automatically, and labels are assigned in accordance, bringing the total number of labeled statements in the final data set to 12835.
+
+\subsection{Party Manifestos}
+
+The data used in this study also consists of the official 2021 election programs for the Bundestag election in Germany. The party manifestos from the six already mentioned parties were downloaded and split into sentences. Note that, because the CSU is part of the Union parliamentary group at the federal level, the CSU statements were included in the CDU file to simplify the data collection process.
+
+There are 1386 sentences in the SPD manifesto, 2602 in the CDU+CSU manifestos, 3689 in ``die Grünen'', 2224 in the FDP, 1607 in the AfD, and 4511 in ``die Linke''. As a result, there are 16019 sentences total in all party manifestos.

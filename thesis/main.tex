@@ -1,0 +1,173 @@
+\documentclass[toc=bibliography,toc=listof, dvipsnames,table, 12pt, a4paper, abstracton]{scrreprt}  
+
+%% included packages:
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}         %% some maths-extensions
+\usepackage{amssymb}         %% some maths-extensions, e.g. \mathbb{R}
+\usepackage{epsfig}          %% for including eps-files (\epsfig{file=...})
+\usepackage{multicol}        %% for multicolumn text on one page
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{cancel}
+\usepackage{mathcomp}
+\usepackage{paralist}
+\usepackage{subfig}
+\usepackage{dsfont}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{lscape}		    
+\usepackage{enumitem}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{etoolbox}
+\appto\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j
+\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w
+\do\x\do\y\do\z}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage[rflt]{floatflt}
+\usepackage{acronym}
+\usepackage{arabtex}
+\usepackage{utf8}
+\usepackage{microtype}
+\setcode{utf8}
+
+
+% bigger space in list of figures
+\makeatletter
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{4em}}
+\makeatother
+
+% bigger space in list of tables
+\makeatletter
+\renewcommand*\l@table{\@dottedtocline{1}{1.5em}{4em}}
+\makeatother
+
+\newcommand{\RM}[1]{\MakeUppercase{\romannumeral #1{}}}
+
+\usepackage[pdfpagemode=UseNone,pdfstartview={Fit},colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+\def\labelitemi{-}
+
+\def\ci{\perp\!\!\!\perp}
+
+\parindent0mm
+
+\newcounter{savefootnote}% Save footnote counter
+
+\begin{document}
+\onehalfspacing
+
+\begin{titlepage}
+
+\begin{center}
+
+\vspace{40mm}
+{\Large \textbf{Master Thesis}} \\
+
+\vspace{5mm}
+
+\hrulefill\\
+\vspace{2.5mm}
+{\Large  \textbf{Enhancing Stance Prediction by Utilizing Party Manifestos}\\}
+\vspace{1mm}
+\hrulefill\\
+\end{center}
+\vspace{2mm}
+\begin{center}
+{\large \textbf{Author}}\\
+\vspace{2mm}
+{\large Lea Schulz-Vanheyden}\\
+\vspace{10mm}
+{\large \textbf{Supervisor}}\\
+\vspace{2mm}
+{\large Matthias Aßenmacher}\\
+\vspace{0.5mm}
+{\large Department of Statistics}\\
+
+\end{center}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=7cm]{figures/LMU}
+\end{figure}
+
+\begin{center}
+{\large Department of Statistics\\
+\vspace{1 mm}
+Ludwig-Maximilians-Universität München\\
+\vspace{3 mm}
+Munich, 8th of May 2023}\\
+\end{center}
+\end{titlepage}
+
+\newpage\null\thispagestyle{empty}\newpage
+
+\include{abstract}
+
+\newpage\null\thispagestyle{empty}\newpage
+
+\pagenumbering{gobble}
+\tableofcontents
+\pagestyle{empty} 
+
+\listoffigures
+
+%\listoftables
+
+\include{abbrv}
+
+\newpage\null\thispagestyle{empty}\newpage
+
+%% inlude the single chapter as separate files
+\newpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{intro}
+\include{statement}
+\include{methods}
+\include{experiments}
+\include{results}
+\include{discussion}
+\include{conclusion}
+
+%% Appendix
+\appendix
+
+\include{appendix}
+
+%% bibliography
+
+\renewcommand{\bibname}{References}
+\bibliography{literature}
+\bibliographystyle{apalike}
+
+\chapter*{Declaration of Authenticity}
+The work contained in this thesis is original and has not been previously submitted for examination which has led to the award of a degree.
+\par\bigskip 
+To the best of my knowledge and belief, this thesis contains no material previously published or written by another person except where due reference is made. 
+
+\par\bigskip      
+%\includegraphics[width = .5\textwidth, height=50px]{figures/unterschrift}
+\par\bigskip  
+
+%\par\bigskip   
+
+\par\bigskip   
+
+\par\bigskip   
+
+\par\bigskip   
+
+Lea Schulz-Vanheyden
+
+
+\end{document}
